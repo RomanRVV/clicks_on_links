@@ -21,6 +21,22 @@ Python3 должен быть уже установлен.
 ```
 pip install -r requirements.txt
 ```
+### Примеры запуска скрипта
+
+1 пример:
+```
+python main.py https://github.com/RomanRVV/clicks_on_links  
+```
+Результат:
+`Битлинк https://bit.ly/3KzmwvZ`
+
+2 пример:
+```
+python main.py https://bit.ly/3KzmwvZ  
+```
+
+Результат:
+`Всего кликов 1`
 
 ### Цель проекта
 
