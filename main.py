@@ -46,18 +46,15 @@ def is_bitlink(token, link):
 
 def main():
     load_dotenv(find_dotenv())
-
     parser = argparse.ArgumentParser(
         description='Описание что делает программа'
     )
     parser.add_argument('user_link', help='Ссылка на страницу')
     args = parser.parse_args()
-
     token = os.environ['BITLY_GENERIC_ACCESS_TOKEN']
-    user_link_check = is_bitlink(token, args.user_link)
 
     try:
-        if not user_link_check:
+        if not is_bitlink(token, args.user_link):
             bitlink = shorten_link(token, args.user_link)
             print('Битлинк', bitlink)
         else:
